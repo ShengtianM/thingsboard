@@ -1,5 +1,5 @@
 /**
- * Copyright © 2016-2018 The Thingsboard Authors
+ * Copyright © 2016-2019 The Thingsboard Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,10 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.thingsboard.server.service.install;
+package org.thingsboard.rule.engine.action;
 
-public interface DataUpdateService {
+import lombok.Data;
 
-    void updateData(String fromVersion) throws Exception;
+@Data
+public abstract class TbAbstractRelationActionNodeConfiguration {
+
+    private String direction;
+    private String relationType;
+
+    private String entityType;
+    private String entityNamePattern;
+    private String entityTypePattern;
+
+    private long entityCacheExpiration;
 
 }
