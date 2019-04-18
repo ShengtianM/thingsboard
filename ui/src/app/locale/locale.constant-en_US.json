@@ -449,8 +449,8 @@
         "make-private-dashboard-title": "Are you sure you want to make the dashboard '{{dashboardTitle}}' private?",
         "make-private-dashboard-text": "After the confirmation the dashboard will be made private and won't be accessible by others.",
         "make-private-dashboard": "Make dashboard private",
-        "socialshare-text": "'{{dashboardTitle}}' powered by ThingsBoard",
-        "socialshare-title": "'{{dashboardTitle}}' powered by ThingsBoard",
+        "socialshare-text": "'{{dashboardTitle}}' powered by UniploreIRex",
+        "socialshare-title": "'{{dashboardTitle}}' powered by UniploreIRex",
         "select-dashboard": "Select dashboard",
         "no-dashboards-matching": "No dashboards matching '{{entity}}' were found.",
         "dashboard-required": "Dashboard is required.",
@@ -669,10 +669,6 @@
     },
     "dialog": {
         "close": "Close dialog"
-    },
-    "direction": {
-        "column": "Column",
-        "row": "Row"
     },
     "error": {
         "unable-to-connect": "Unable to connect to the server! Please check your internet connection.",
@@ -1120,7 +1116,6 @@
         "select": "Select target layout"
     },
     "legend": {
-        "direction": "Legend direction",
         "position": "Legend position",
         "show-max": "Show max value",
         "show-min": "Show min value",
