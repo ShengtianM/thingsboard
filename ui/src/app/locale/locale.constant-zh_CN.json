@@ -316,7 +316,7 @@
     },
     "common": {
         "username": "用户名",
-        "password": "密码",
+        "password": "密码：tenant",
         "enter-username": "输入用户名",
         "enter-password": "输入密码",
         "enter-search": "输入检索条件"
@@ -1101,7 +1101,7 @@
         "passwords-mismatch-error": "输入的密码必须相同！",
         "password-again": "再次输入密码",
         "sign-in": "登录 ",
-        "username": "用户名（电子邮件）",
+        "username": "用户名（电子邮件）：tenant@uniplore.io",
         "remember-me": "记住我",
         "forgot-password": "忘记密码？",
         "password-reset": "密码重置",

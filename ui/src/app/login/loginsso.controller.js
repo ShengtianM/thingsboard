@@ -20,20 +20,20 @@ import logoSvg from '../../svg/logo_title_white.svg';
 /* eslint-enable import/no-unresolved, import/default */
 
 /*@ngInject*/
-export default function LoginController(toast, loginService, userService/*, $rootScope, $log, $translate*/) {
+export default function LoginSSOController(toast, loginService, userService, $stateParams/*, $rootScope, $log, $translate*/) {
     var vm = this;
 
     vm.logoSvg = logoSvg;
 
-    vm.user = {
-        name: '',
-        password: ''
-    };
+    vm.loginsso = loginsso;
 
-    vm.login = login;
+    function loginsso(){
 
-    function doLogin() {
-        loginService.login(vm.user).then(function success(response) {
+        vm.tuser = {
+            name: $stateParams.username,
+            password: $stateParams.password
+        };
+        loginService.login(vm.tuser).then(function success(response) {
             var token = response.data.token;
             var refreshToken = response.data.refreshToken;
             userService.setUserFromJwtToken(token, refreshToken, true);
@@ -47,9 +47,4 @@ export default function LoginController(toast, loginService, userService/*, $roo
             }*/
         });
     }
-
-    function login() {
-        doLogin();
-    }
-
 }

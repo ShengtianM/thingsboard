@@ -19,6 +19,7 @@ import loginTemplate from './login.tpl.html';
 import resetPasswordTemplate from './reset-password.tpl.html';
 import resetPasswordRequestTemplate from './reset-password-request.tpl.html';
 import createPasswordTemplate from './create-password.tpl.html';
+import loginssoTemplate from './loginsso.tpl.html';
 
 /* eslint-enable import/no-unresolved, import/default */
 
@@ -75,6 +76,19 @@ export default function LoginRoutes($stateProvider) {
         },
         data: {
             pageTitle: 'login.create-password'
+        }
+    }).state('login.loginsso', {
+        url: '/loginsso?username&password',
+        module: 'public',
+        views: {
+            "@": {
+                controller: 'LoginSSOController',
+                controllerAs: 'vm',
+                templateUrl: loginssoTemplate
+            }
+        },
+        data: {
+            pageTitle: 'login.login'
         }
     });
 }
